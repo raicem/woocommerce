@@ -208,9 +208,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 
 			);
 
-		$settings = apply_filters( 'woocommerce_email_settings', $settings );
-
-		return apply_filters( 'woocommerce_get_settings_' . $this->id, $settings );
+		return apply_filters( 'woocommerce_email_settings', $settings );
 	}
 
 	/**
