@@ -42,7 +42,6 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 			'webhooks'        => __( 'Webhooks', 'woocommerce' ),
 			'legacy_api'      => __( 'Legacy API', 'woocommerce' ),
 			'woocommerce_com' => __( 'WooCommerce.com', 'woocommerce' ),
-			'features'        => __( 'Features', 'woocommerce' ),
 		);
 	}
 
@@ -406,35 +405,6 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 			);
 
 		return apply_filters( 'woocommerce_settings_rest_api', $settings );
-	}
-
-	/**
-	 * Get settings for the features section.
-	 *
-	 * @return array
-	 */
-	protected function get_settings_for_features_section() {
-		$settings =
-			array(
-				array(
-					'title' => __( 'Features', 'woocommerce' ),
-					'type'  => 'title',
-					'desc'  => __( 'Start using new features that are being progressively rolled out to improve the store management experience.', 'woocommerce' ),
-					'id'    => 'features_options',
-				),
-				array(
-					'title' => __( 'Home Screen', 'woocommerce' ),
-					'desc'  => __( 'Displays analytical insights, inbox notifications, and handy shortcuts in a single screen', 'woocommerce' ),
-					'id'    => 'woocommerce_homescreen_enabled',
-					'type'  => 'checkbox',
-				),
-				array(
-					'type' => 'sectionend',
-					'id'   => 'features_options',
-				),
-			);
-
-		return apply_filters( 'woocommerce_settings_features', $settings );
 	}
 
 	/**
