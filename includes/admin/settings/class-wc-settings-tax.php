@@ -77,7 +77,7 @@ class WC_Settings_Tax extends WC_Settings_Page {
 	 * @return array
 	 */
 	public function get_settings_for_default_section() {
-		return include 'views/settings-tax.php';
+		return include __DIR__ . '/views/settings-tax.php';
 	}
 
 	/**
